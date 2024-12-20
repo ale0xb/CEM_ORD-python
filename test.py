@@ -1,6 +1,7 @@
 from cem_ord.cem_ord import CEMOrd
 import pandas as pd 
 
+
 # Load gold data from tsv file it has 3 fields (source, case, label)
 
 gold = pd.read_csv('data/GOLD.tsv', sep='\t')
@@ -23,7 +24,6 @@ for source in df["source"].unique():
     source_df = df[df["source"] == source]
     gold_labels = source_df["label"].tolist()
     system_labels = source_df["pred"].tolist()
-    print(set(gold_labels), set(system_labels))
     cem_ord_metric = CEMOrd(gold_labels, system_labels)
     score = cem_ord_metric.evaluate()
     print(f"Source: {source}, CEM-Ord Score: {score}")
