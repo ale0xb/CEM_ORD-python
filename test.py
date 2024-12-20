@@ -10,6 +10,10 @@ gold.columns = ["source", "case", "label"]
 sys = pd.read_csv('data/SYS.tsv', sep='\t')
 sys.columns = ["source", "case", "pred"]
 
+# Remove any rows with missing values in pred 
+sys = sys.dropna(subset=["pred"])
+
+
 # Merge the gold and sys dataframes on "source" and "case" 
 df = pd.merge(gold, sys, on=["source", "case"])
 
@@ -17,7 +21,7 @@ df = pd.merge(gold, sys, on=["source", "case"])
 df["label"] = df["label"].astype(str)
 df["pred"] = df["pred"].astype(str)
 
-
+scores = [] 
 # For each source, compute the CEM-Ord score
 cem_ord_scores = []
 for source in df["source"].unique():
@@ -26,7 +30,10 @@ for source in df["source"].unique():
     system_labels = source_df["pred"].tolist()
     cem_ord_metric = CEMOrd(gold_labels, system_labels)
     score = cem_ord_metric.evaluate()
+    scores.append((source, score))
     print(f"Source: {source}, CEM-Ord Score: {score}")
 
-
+# Print mean CEM-Ord score
+mean_cem_ord_score = sum(score for _, score in scores) / len(scores)
+print(f"Mean CEM-Ord Score: {mean_cem_ord_score}")
 
