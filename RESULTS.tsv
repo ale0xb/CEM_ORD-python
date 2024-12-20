@@ -1,0 +1,80 @@
+#############################################################################
+#				AUTOMATIC EvALL TSV REPORT
+#
+#	We kindly ask you to cite the following work when using EvALL:
+#			An Effectiveness Metric for Ordinal Classification: Formal Properties and Experimental Results
+#			Enrique Amigó, Julio Gonzalo, Stefano Mizzaro, Jorge Carrillo-de-Albornoz
+#			In proceedings of ACL'20
+#
+#	This file contains the results for the output: 
+#			• build/resources/test/SYS.tsv
+#
+#	The next table contains the results for each test case in this output. 
+#	Notice that first are shown the test cases present in the gold, and after that those not present. 
+#	Those measures that do not satisfy the preconditions are marked with -.
+#############################################################################
+#The measures included in the table are:
+#		- CEM-Ord
+#############################################################################
+"Test Case"	"CEM-Ord"
+"RL2013D01E025"	"0.5875"
+"RL2013D01E022"	"0.6188"
+"RL2013D04E162"	"0.6853"
+"RL2013D04E161"	"0.6196"
+"RL2013D04E169"	"0.6189"
+"RL2013D02E070"	"0.5954"
+"RL2013D04E167"	"0.5885"
+"RL2013D02E076"	"0.5817"
+"RL2013D04E166"	"0.6091"
+"RL2013D04E164"	"0.6579"
+"RL2013D03E089"	"0.6307"
+"RL2013D03E088"	"0.6051"
+"RL2013D03E124"	"0.5617"
+"RL2013D01E019"	"0.6163"
+"RL2013D01E014"	"0.6769"
+"RL2013D01E013"	"0.5975"
+"RL2013D01E016"	"0.6078"
+"RL2013D01E015"	"0.6374"
+"RL2013D01E012"	"0.6534"
+"RL2013D03E087"	"0.5899"
+"RL2013D03E086"	"0.5847"
+"RL2013D04E152"	"0.7479"
+"RL2013D04E151"	"0.6698"
+"RL2013D04E194"	"0.6035"
+"RL2013D04E159"	"0.7118"
+"RL2013D04E155"	"0.5906"
+"RL2013D04E198"	"0.7215"
+"RL2013D04E153"	"0.6166"
+"RL2013D01E009"	"0.6071"
+"RL2013D01E008"	"0.5869"
+"RL2013D01E003"	"0.6531"
+"RL2013D01E002"	"0.5959"
+"RL2013D01E005"	"0.6176"
+"RL2013D01E043"	"0.6687"
+"RL2013D03E091"	"0.5613"
+"RL2013D01E001"	"0.6047"
+"RL2013D01E044"	"0.5985"
+"RL2013D03E093"	"0.6099"
+"RL2013D03E096"	"0.6367"
+"RL2013D01E041"	"0.5821"
+"RL2013D01E040"	"0.6187"
+"RL2013D03E097"	"0.5734"
+"RL2013D04E185"	"0.6035"
+"RL2013D02E057"	"0.6210"
+"RL2013D02E056"	"0.6201"
+"RL2013D03E090"	"0.5479"
+"RL2013D02E051"	"0.5863"
+"RL2013D04E149"	"0.6267"
+"RL2013D04E146"	"0.5800"
+"RL2013D02E055"	"0.6794"
+"RL2013D04E145"	"0.5761"
+"RL2013D02E054"	"0.6660"
+"RL2013D01E035"	"0.6585"
+"RL2013D04E207"	"0.6162"
+"RL2013D04E206"	"0.5835"
+"RL2013D01E033"	"0.5810"
+"RL2013D02E068"	"0.8946"
+"RL2013D02E067"	"0.5514"
+"RL2013D02E060"	"0.6260"
+"RL2013D02E063"	"0.7258"
+"RL2013D04E175"	"0.5714"
