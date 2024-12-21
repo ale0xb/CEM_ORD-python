@@ -4,15 +4,18 @@ import pandas as pd
 
 # Load gold data from tsv file it has 3 fields (source, case, label)
 
-gold = pd.read_csv('data/GOLD.tsv', sep='\t')
+gold = pd.read_csv('/workspaces/playground/CEM_ORD-python/data/GOLD.tsv', sep='\t')
 # Rename the columns to "source", "case", "label"
 gold.columns = ["source", "case", "label"]
-sys = pd.read_csv('data/SYS.tsv', sep='\t')
+sys = pd.read_csv('/workspaces/playground/CEM_ORD-python/data/SYS.tsv', sep='\t')
 sys.columns = ["source", "case", "pred"]
 
 # Remove any rows with missing values in pred 
 sys = sys.dropna(subset=["pred"])
 
+# Convert 'case' columns to string type to ensure they match
+gold["case"] = gold["case"].astype("Int64")
+sys["case"] = sys["case"].astype("Int64")
 
 # Merge the gold and sys dataframes on "source" and "case" 
 df = pd.merge(gold, sys, on=["source", "case"])
